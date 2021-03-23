@@ -45,7 +45,7 @@ PROJECT_APPS = [
     'reviews.apps.ReviewsConfig',
     'reservations.apps.ReservationsConfig',
     'lists.apps.ListsConfig',
-    # 'conservations',
+    'conversations.apps.ConversationsConfig',
 ]
 
 THIRD_PARTY_APPS = [
