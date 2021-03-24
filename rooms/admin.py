@@ -15,7 +15,26 @@ class RoomAdmin(admin.ModelAdmin):
 
     """ Room Admin Definition """
 
-    pass
+    list_display = (
+        "name",
+        "country",
+        "city",
+        "price",
+        "address",
+        "guests",
+        "beds",
+        "bedrooms",
+        "bath",
+        "check_in",
+        "check_out",
+        "instant_book",
+    )
+
+    list_filter = ('instant_book', 'host__superuser', 'room_type', 'amenities', 'facilities', 'house_rules', 'city', 'country',)
+
+    search_fields = ('city', '^host__username', )
+
+    filter_horizontal = ('amenities', 'facilities', 'house_rules',)
 
 
 @admin.register(models.Photo)
